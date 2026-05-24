@@ -1,0 +1,12 @@
+{
+  "block.create_better_radars.anti_air_radar_bearing": "Anti-Air Radar Bearing",
+
+  "goggle.create_better_radars.anti_air_radar": "Anti-Air Radar",
+  "goggle.create_better_radars.scan_zone": "Scan zone: +%s..+%s blocks",
+  "goggle.create_better_radars.targets": "Targets: %s",
+  "goggle.create_better_radars.range_multiplier": "Range multiplier: %sx",
+
+  "goggle.create_better_radars.target_sable": "Sable/Aeronautics",
+  "goggle.create_better_radars.target_projectiles": "projectiles",
+  "goggle.create_better_radars.target_none": "none"
+}

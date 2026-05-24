@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.limbo2136.createbetterradars.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityBehaviourAccessor",
+    "RadarScanningBlockBehaviorMixin",
+    "CannonUtilLogSpamMixin"
+  ],
+  "client": [
+    "MonitorRendererSableTrackFixMixin",
+    "MonitorScreenSableTrackFixMixin",
+    "MonitorRendererSableSweepFixMixin",
+    "MonitorScreenSableSweepFixMixin"
+  ],
+  "server": []
+}

@@ -1,0 +1,12 @@
+{
+  "block.create_better_radars.anti_air_radar_bearing": "Вращатель ПВО-радара",
+
+  "goggle.create_better_radars.anti_air_radar": "ПВО-радар",
+  "goggle.create_better_radars.scan_zone": "Зона сканирования: +%s..+%s блоков",
+  "goggle.create_better_radars.targets": "Цели: %s",
+  "goggle.create_better_radars.range_multiplier": "Множитель дальности: %sx",
+
+  "goggle.create_better_radars.target_sable": "Sable/Aeronautics",
+  "goggle.create_better_radars.target_projectiles": "снаряды",
+  "goggle.create_better_radars.target_none": "нет"
+}

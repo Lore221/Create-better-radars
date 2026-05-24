@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "create_better_radars:block/anti_air_radar_bearing"
+    }
+  }
+}
