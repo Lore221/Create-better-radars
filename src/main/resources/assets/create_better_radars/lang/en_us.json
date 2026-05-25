@@ -1,11 +1,18 @@
 {
   "block.create_better_radars.anti_air_radar_bearing": "Anti-Air Radar Bearing",
+  "block.create_better_radars.rls_radar_bearing": "RLS Radar Bearing",
 
   "goggle.create_better_radars.anti_air_radar": "Anti-Air Radar",
+  "goggle.create_better_radars.rls_radar": "RLS Surface Radar",
   "goggle.create_better_radars.scan_zone": "Scan zone: +%s..+%s blocks",
+  "goggle.create_better_radars.rls_scan_zone": "Scan zone: -%s blocks",
+  "goggle.create_better_radars.rls_allowed_depth": "Allowed depth: %s blocks below surface",
   "goggle.create_better_radars.targets": "Targets: %s",
   "goggle.create_better_radars.range_multiplier": "Range multiplier: %sx",
 
+  "goggle.create_better_radars.target_players": "players",
+  "goggle.create_better_radars.target_hostile_mobs": "hostile mobs",
+  "goggle.create_better_radars.target_passive_mobs": "passive mobs",
   "goggle.create_better_radars.target_sable": "Sable/Aeronautics",
   "goggle.create_better_radars.target_projectiles": "projectiles",
   "goggle.create_better_radars.target_none": "none"

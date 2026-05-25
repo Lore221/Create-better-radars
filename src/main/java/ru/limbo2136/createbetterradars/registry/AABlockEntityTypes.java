@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.limbo2136.createbetterradars.CreateBetterRadars;
 import ru.limbo2136.createbetterradars.block.entity.AntiAirRadarBearingBlockEntity;
+import ru.limbo2136.createbetterradars.block.entity.RlsRadarBearingBlockEntity;
 
 public class AABlockEntityTypes {
     // Реестр BlockEntityType нашего мода.
@@ -26,6 +27,18 @@ public class AABlockEntityTypes {
 
                             // Указываем, к какому блоку эта BlockEntity относится.
                             ModBlocks.ANTI_AIR_RADAR_BEARING.get()
+                    ).build(null)
+            );
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RlsRadarBearingBlockEntity>> RLS_RADAR_BEARING =
+            BLOCK_ENTITY_TYPES.register("rls_radar_bearing", () ->
+                    BlockEntityType.Builder.of(
+                            (pos, state) -> new RlsRadarBearingBlockEntity(
+                                    AABlockEntityTypes.RLS_RADAR_BEARING.get(),
+                                    pos,
+                                    state
+                            ),
+                            ModBlocks.RLS_RADAR_BEARING.get()
                     ).build(null)
             );
 

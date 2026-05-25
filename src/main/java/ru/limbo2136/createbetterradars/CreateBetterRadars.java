@@ -7,11 +7,11 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 import ru.limbo2136.createbetterradars.config.AAConfig;
+import ru.limbo2136.createbetterradars.logging.RadarsLogSpamFilter;
 import ru.limbo2136.createbetterradars.registry.AABlockEntityTypes;
 import ru.limbo2136.createbetterradars.registry.AACreativeTabEvents;
 import ru.limbo2136.createbetterradars.registry.ModBlocks;
 import ru.limbo2136.createbetterradars.registry.ModItems;
-import ru.limbo2136.createbetterradars.logging.RadarsLogSpamFilter;
 
 @Mod(CreateBetterRadars.MOD_ID)
 public class CreateBetterRadars {
@@ -24,7 +24,6 @@ public class CreateBetterRadars {
                 AAConfig.SPEC,
                 "create_better_radars-server.toml"
         );
-
         RadarsLogSpamFilter.install();
 
         ModBlocks.register(modEventBus);

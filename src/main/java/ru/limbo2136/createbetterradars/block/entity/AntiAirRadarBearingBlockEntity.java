@@ -19,11 +19,6 @@ public class AntiAirRadarBearingBlockEntity extends RadarBearingBlockEntity {
     }
 
     // Тип радара. Может использоваться мониторами, логикой, отладкой или будущими интеграциями.
-    @Override
-    public String getRadarType() {
-        return super.getRadarType();
-    }
-
     // Горизонтальная дальность считается как у обычного радара,
     // но умножается на множитель из server config.
     @Override
@@ -36,8 +31,8 @@ public class AntiAirRadarBearingBlockEntity extends RadarBearingBlockEntity {
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
         boolean result = super.addToGoggleTooltip(tooltip, isPlayerSneaking);
 
-        int blindZone = AAConfig.ANTI_AIR_BLIND_ZONE_ABOVE.get();
         int verticalRange = AAConfig.VERTICAL_SCAN_UP_RANGE.get();
+        int blindZone = AAConfig.effectiveAntiAirBlindZone();
         double horizontalMultiplier = AAConfig.HORIZONTAL_RANGE_MULTIPLIER.get();
 
         List<MutableComponent> targets = new ArrayList<>();

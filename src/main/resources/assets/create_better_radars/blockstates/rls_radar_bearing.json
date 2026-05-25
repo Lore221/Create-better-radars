@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "create_better_radars:block/rls_radar_bearing"
+    }
+  }
+}

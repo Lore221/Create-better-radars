@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " G ",
+    "IBI",
+    " C "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:tinted_glass"
+    },
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "B": {
+      "item": "create_radar:radar_bearing"
+    },
+    "C": {
+      "item": "create:brass_casing"
+    }
+  },
+  "result": {
+    "id": "create_better_radars:rls_radar_bearing",
+    "count": 1
+  }
+}

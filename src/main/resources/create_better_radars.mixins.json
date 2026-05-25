@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BlockEntityBehaviourAccessor",
-    "RadarScanningBlockBehaviorMixin",
-    "CannonUtilLogSpamMixin"
+    "RadarScanningBlockBehaviorMixin"
   ],
   "client": [
     "MonitorRendererSableTrackFixMixin",

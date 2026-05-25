@@ -15,9 +15,10 @@ public class AACreativeTabEvents {
             return;
         }
 
-        CreateBetterRadars.LOGGER.info("Adding Anti-Air Radar Bearing to creative tab: {}", tabId);
+        CreateBetterRadars.LOGGER.info("Adding Create: Better Radars items to creative tab: {}", tabId);
 
         // Добавляем наш блок-предмет во вкладку.
         event.accept(ModItems.ANTI_AIR_RADAR_BEARING.get());
+        event.accept(ModItems.RLS_RADAR_BEARING.get());
     }
 }

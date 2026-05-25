@@ -36,7 +36,7 @@ public class RadarsLogSpamFilter extends AbstractFilter {
 
         context.updateLoggers();
 
-        CreateBetterRadars.LOGGER.info("Installed Create: Radars targeting log spam filter");
+        CreateBetterRadars.LOGGER.info("Installed residual Create: Radars debug log filter");
     }
 
     @Override
@@ -74,34 +74,19 @@ public class RadarsLogSpamFilter extends AbstractFilter {
             return false;
         }
 
-        return isNoisyCreateRadarsTargetingMessage(message);
+        return isForgottenCreateRadarsDebugMessage(message);
     }
 
     private static boolean isSuppressEnabledSafely() {
         try {
-            return AAConfig.SUPPRESS_CREATE_RADARS_TARGETING_LOGS.get();
+            return AAConfig.SUPPRESS_FORGOTTEN_CREATE_RADARS_DEBUG_LOGS.get();
         } catch (IllegalStateException | NullPointerException ignored) {
-            // If the config is not loaded yet, temporarily keep the filter enabled.
-            // This only affects Create: Radars noisy targeting logs and does not change mechanics.
+            // This only affects known Create: Radars debug messages and does not change mechanics.
             return true;
         }
     }
 
-    private static boolean isNoisyCreateRadarsTargetingMessage(String message) {
-        // CannonUtil / CBC projectile speed spam
-        if (message.contains("AutoCannon speed")) {
-            return true;
-        }
-
-        if (message.contains("BigCannon speed")) {
-            return true;
-        }
-
-        if (message.contains("getInitialVelocity for contraption")) {
-            return true;
-        }
-
-        // Pitch controller spam
+    private static boolean isForgottenCreateRadarsDebugMessage(String message) {
         if (message.contains("PITCH.rotateCBC")) {
             return true;
         }
@@ -114,49 +99,7 @@ public class RadarsLogSpamFilter extends AbstractFilter {
             return true;
         }
 
-        // WeaponFiringControl spam
-        if (message.contains("setTarget() -> new target")) {
-            return true;
-        }
-
-        if (message.contains("setSafeZones() ->")) {
-            return true;
-        }
-
-        if (message.contains("WFC FIREGATES")) {
-            return true;
-        }
-
         if (message.contains("WFC AIMCHK")) {
-            return true;
-        }
-
-        if (message.contains("WFC BLOCK")) {
-            return true;
-        }
-
-        if (message.equals("firing!")) {
-            return true;
-        }
-
-        if (message.contains("WFC: entity id") && message.contains("not loaded/alive")) {
-            return true;
-        }
-
-        // Monitor selection spam
-        if (message.contains("MONITOR setSelectedTargetServer")) {
-            return true;
-        }
-
-        if (message.contains("MONITOR forwarding to filterer")) {
-            return true;
-        }
-
-        if (message.contains("MONITOR found filterer BE")) {
-            return true;
-        }
-
-        if (message.equals("Ping")) {
             return true;
         }
 

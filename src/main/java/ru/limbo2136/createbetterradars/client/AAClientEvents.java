@@ -24,6 +24,10 @@ public class AAClientEvents {
                 AABlockEntityTypes.ANTI_AIR_RADAR_BEARING.get(),
                 BearingRenderer::new
         );
+        event.registerBlockEntityRenderer(
+                AABlockEntityTypes.RLS_RADAR_BEARING.get(),
+                BearingRenderer::new
+        );
     }
 
     @SubscribeEvent
@@ -34,8 +38,12 @@ public class AAClientEvents {
                     .builder(AABlockEntityTypes.ANTI_AIR_RADAR_BEARING.get())
                     .factory(BearingVisual::new)
                     .apply();
+            SimpleBlockEntityVisualizer
+                    .builder(AABlockEntityTypes.RLS_RADAR_BEARING.get())
+                    .factory(BearingVisual::new)
+                    .apply();
 
-            CreateBetterRadars.LOGGER.info("Registered Flywheel visual for Anti-Air Radar Bearing");
+            CreateBetterRadars.LOGGER.info("Registered Flywheel visuals for specialized radar bearings");
         });
     }
 }

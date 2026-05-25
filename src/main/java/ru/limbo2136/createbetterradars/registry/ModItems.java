@@ -15,6 +15,9 @@ public class ModItems {
     public static final DeferredItem<BlockItem> ANTI_AIR_RADAR_BEARING =
             ITEMS.registerSimpleBlockItem(ModBlocks.ANTI_AIR_RADAR_BEARING);
 
+    public static final DeferredItem<BlockItem> RLS_RADAR_BEARING =
+            ITEMS.registerSimpleBlockItem(ModBlocks.RLS_RADAR_BEARING);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

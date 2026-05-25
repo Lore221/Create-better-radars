@@ -1,11 +1,18 @@
 {
   "block.create_better_radars.anti_air_radar_bearing": "Вращатель ПВО-радара",
+  "block.create_better_radars.rls_radar_bearing": "Вращатель РЛС-радара",
 
   "goggle.create_better_radars.anti_air_radar": "ПВО-радар",
+  "goggle.create_better_radars.rls_radar": "РЛС поверхностного обзора",
   "goggle.create_better_radars.scan_zone": "Зона сканирования: +%s..+%s блоков",
+  "goggle.create_better_radars.rls_scan_zone": "Зона сканирования: -%s блоков",
+  "goggle.create_better_radars.rls_allowed_depth": "Допустимая глубина: %s блоков ниже поверхности",
   "goggle.create_better_radars.targets": "Цели: %s",
   "goggle.create_better_radars.range_multiplier": "Множитель дальности: %sx",
 
+  "goggle.create_better_radars.target_players": "игроки",
+  "goggle.create_better_radars.target_hostile_mobs": "враждебные мобы",
+  "goggle.create_better_radars.target_passive_mobs": "пассивные мобы",
   "goggle.create_better_radars.target_sable": "Sable/Aeronautics",
   "goggle.create_better_radars.target_projectiles": "снаряды",
   "goggle.create_better_radars.target_none": "нет"

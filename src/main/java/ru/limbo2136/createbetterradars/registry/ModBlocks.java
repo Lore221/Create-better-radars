@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.limbo2136.createbetterradars.CreateBetterRadars;
 import ru.limbo2136.createbetterradars.block.AntiAirRadarBearingBlock;
+import ru.limbo2136.createbetterradars.block.RlsRadarBearingBlock;
 
 public class ModBlocks {
     // Реестр блоков нашего мода.
@@ -23,6 +24,18 @@ public class ModBlocks {
                                     // Это важно для нормального освещения модели и вращающейся верхушки.
                                     .noOcclusion()
 
+                                    .strength(3.0F, 6.0F)
+                                    .sound(SoundType.METAL)
+                                    .requiresCorrectToolForDrops()
+                    )
+            );
+
+    public static final DeferredBlock<RlsRadarBearingBlock> RLS_RADAR_BEARING =
+            BLOCKS.register(
+                    "rls_radar_bearing",
+                    () -> new RlsRadarBearingBlock(
+                            BlockBehaviour.Properties.of()
+                                    .noOcclusion()
                                     .strength(3.0F, 6.0F)
                                     .sound(SoundType.METAL)
                                     .requiresCorrectToolForDrops()
